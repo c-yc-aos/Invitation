@@ -1,0 +1,89 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>婚礼请帖</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<script src="js/coyoc.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="door" class="door max">
+		<div class="center Vertical" text="{{ name }}">
+			{{ name }}
+		</div>
+		<p base-fun="open">亲启</p>
+		<div class="right towOne"></div>
+		<div class="left towOne"></div>
+	</div>
+	<div id="center" class="value">
+	</div>
+	<div id="guide" class="guide">
+		<img src="img/097.png" alt="" />
+		<h5>恭候您的光临</h5>
+		<p base-fun="showAddress">获取地址</p>
+		<p base-fun="showboard">查看留言</p>
+	</div>
+	<div class="Board max">
+		<b base-fun="back">&lt;&lt;&lt;返回</b>
+		<div class="see" id='see'>
+		</div>
+		<textarea type="text" class="speak" id="speak" placeholder="您也可以留下祝福哦" ></textarea>
+		<button class="send" base-fun="send">发布</button>
+	</div>
+	<div class="mymodl" id="select">
+	</div>
+</body>
+<script type="text/javascript">
+	var agent = ["{{ agent }}","Hotel"];
+	var address = {
+		"gmap":{
+			"Groom" :{
+				"E":"118.3643320000",//东经
+				"N":"37.0222930000",//北纬
+				"title":"新郎家"
+			},
+			"Bride":{
+				"E":"118.4807400000",//东经
+				"N":"37.0918030000",//北纬
+				"title":"新娘家"
+			},
+			"Hotel" :{
+				"E":"118.3483210000",//东经
+				"N":"37.0016700000",//北纬
+				"title":"喜临门酒店"
+			},
+		},
+		"bmap":{
+			"Groom" :{
+				"E":"118.3708703089",//东经
+				"N":"37.0281897439",//北纬
+				"title":"新郎家"
+			},
+			"Bride":{
+				"E":"118.4872902705",//东经
+				"N":"37.0977062293",//北纬
+				"title":"新娘家"
+			},
+			"Hotel" :{
+				"E":"118.3548195135",//东经
+				"N":"37.0077567674",//北纬
+				"title":"喜临门酒店"
+			},
+		}
+		
+	};
+	var str = "h送呈s{{ name }}eep我们将于戊戌年九月十三日，"+
+	"阳历2018年10月21号epb举行结婚典礼eep席设："+
+	"广饶县喜临门酒店ep恭请s{{ name }}e"+
+	"光临ep新郎s成永超e新娘s成艳凤eb敬邀ee",name = "{{ name }}"
+</script>
+</html> 
